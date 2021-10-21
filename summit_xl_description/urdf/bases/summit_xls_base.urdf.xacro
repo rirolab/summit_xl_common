@@ -173,6 +173,7 @@
         <xacro:include filename="$(find roas_bringup)/urdf/roas.urdf.xacro"/>
         <xacro:riro_top_structure prefix="${prefix}"/>
         <joint name="${prefix}top_structure_joint" type="fixed">
+            <!-- <origin xyz="0.0 0 0.0" rpy="0 0 0" /> -->
             <origin xyz="0.0 0 0.0" rpy="0 0 0" />
             <parent link="${prefix}base_chapa"/>
             <child link="${prefix}top_structure" />
@@ -186,9 +187,11 @@
         <xacro:arg name="gripper_prefix" default="${prefix}"/>
         <xacro:ur5e_with_2f85 arm_prefix="$(arg arm_prefix)" gripper_prefix="$(arg gripper_prefix)"/>
         <joint name="$(arg arm_prefix)joint" type="fixed">
-            <parent link="${prefix}base_link" />
+            <!-- <parent link="${prefix}base_link" /> -->
+            <parent link="${prefix}top_structure" />
             <child link ="$(arg arm_prefix)base_link" />
-            <origin xyz="0.255 0 0.4" rpy="0 0 -1.5708" />
+            <!-- <origin xyz="0.255 0 0.4" rpy="0 0 -1.5708" /> -->
+            <origin xyz="0.225 0 0.012" rpy="0 0 -1.5708" />
         </joint>
 
     
