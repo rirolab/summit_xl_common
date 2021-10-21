@@ -173,7 +173,6 @@
         <xacro:include filename="$(find roas_bringup)/urdf/roas.urdf.xacro"/>
         <xacro:riro_top_structure prefix="${prefix}"/>
         <joint name="${prefix}top_structure_joint" type="fixed">
-            <!-- <origin xyz="0.0 0 0.0" rpy="0 0 0" /> -->
             <origin xyz="0.0 0 0.0" rpy="0 0 0" />
             <parent link="${prefix}base_chapa"/>
             <child link="${prefix}top_structure" />
