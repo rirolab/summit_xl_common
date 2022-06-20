@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(summit_xl_control)
+cmake_policy(SET CMP0048 NEW)
+project(summit_xl_control VERSION 1.1.3 LANGUAGES CXX)
 
 
 find_package(catkin REQUIRED

@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(summit_xl_perception)
+cmake_policy(SET CMP0048 NEW)
+project(summit_xl_perception VERSION 0.1.0 LANGUAGES CXX)
 
 find_package(catkin REQUIRED COMPONENTS)
 
