@@ -96,11 +96,11 @@
 
 
 		<!-- SENSORS -->
-                <xacro:if value="$(optenv ENABLE_FRONT_CAMERA)" >
+		<xacro:if value="$(optenv ENABLE_FRONT_CAMERA)" >
 		  <xacro:sensor_orbbec_astra prefix="$(arg prefix)front_rgbd_camera" parent="$(arg prefix)base_link" prefix_topic="front_rgbd_camera">
 		    <origin xyz="${front_rgbd_camera_offset_x} ${front_rgbd_camera_offset_y} ${front_rgbd_camera_offset_z}" rpy="0 0 0"/>
 		  </xacro:sensor_orbbec_astra>
-                </xacro:if>
+		</xacro:if>
 
 		<!--xacro:sensor_gps prefix="$(arg prefix)gps" parent="$(arg prefix)base_link">
 			<origin xyz="${gps_offset_x} ${gps_offset_y} ${gps_offset_z}" rpy="0 0 0"/>
