@@ -63,7 +63,7 @@
 	<xacro:arg name="gpu" default="false"/>
 
 
-    <xacro:macro name="summit_xl" params="prefix publish_bf hq">
+    <xacro:macro name="summit_xl" params="prefix publish_bf hq gpu:=false">
 
 		<!-- *************** -->
 		<!-- Robots Elements -->
@@ -72,7 +72,7 @@
 		<!-- Here we create the robot elements using the xacro:macros imported at the beggining of this file -->
 
 		<!-- Summit XL base -->
-		<xacro:summit_xls_base prefix="$(arg prefix)" publish_bf="true" hq="${hq}" />
+		<xacro:summit_xls_base prefix="$(arg prefix)" publish_bf="true" hq="${hq}" gpu="${gpu}"/>
 
 		<xacro:omni_wheel prefix="$(arg prefix)front_right" parent="$(arg prefix)base_link" reflect="false" hq="${hq}">
 			<origin xyz="${wheel_offset_x} -${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0"/>
@@ -114,7 +114,7 @@
 	   <xacro:omni_steering prefix="$(arg prefix)" publish_tf="true"/>
    </xacro:if>
 
-   <xacro:summit_xl prefix="$(arg prefix)" publish_bf="true" hq="true"/>
+   <xacro:summit_xl prefix="$(arg prefix)" publish_bf="true" hq="true" gpu="$(arg gpu)"/>
 
 
 </robot>

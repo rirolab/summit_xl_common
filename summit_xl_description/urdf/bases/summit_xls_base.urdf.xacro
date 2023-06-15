@@ -3,7 +3,7 @@
 
     <xacro:include filename="$(find summit_xl_description)/urdf/bases/summit_xl_base.gazebo.xacro" />
 
-    <xacro:macro name="summit_xls_base" params="prefix publish_bf hq">
+    <xacro:macro name="summit_xls_base" params="prefix publish_bf hq gpu:=false">
 
         <!-- Robot mechanical and motor parameters -->
         <xacro:property name="PI" value="3.1415926535897931"/>
@@ -171,7 +171,7 @@
 
         <!-- For a Structure and Sensors -->
         <xacro:include filename="$(find roas_bringup)/urdf/roas.urdf.xacro"/>
-        <xacro:riro_top_structure prefix="${prefix}"/>
+        <xacro:riro_top_structure prefix="${prefix}" gpu="${gpu}"/>
         <joint name="${prefix}top_structure_joint" type="fixed">
             <origin xyz="0.0 0 0.0" rpy="0 0 0" />
             <parent link="${prefix}base_chapa"/>
