@@ -15,9 +15,9 @@ srr: 0.1
 srt: 0.2
 str: 0.1
 stt: 0.2
-linearUpdate: 0.2
+linearUpdate: 0.01 #0.2
 angularUpdate: 0.1
-temporalUpdate: 3.0
+temporalUpdate: 0.1 #3.0
 resampleThreshold: 0.5
 particles: 100
 xmin: -50.0
