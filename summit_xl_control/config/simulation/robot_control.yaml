@@ -49,9 +49,10 @@ robotnik_base_control:
     z:
       has_velocity_limits    : true
       max_velocity           : 6.0 #3.0  # rad/s
+      min_velocity           : -6.0 #3.0  # rad/s
       has_acceleration_limits: true
       max_acceleration       : 6.0 #3.0  # rad/s^2
-
+      min_acceleration       : -6.0 #3.0  # rad/s^2
 
 joint_read_state_controller:
   type: joint_state_controller/JointStateController
