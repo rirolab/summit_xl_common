@@ -24,6 +24,11 @@ topics:
   timeout : 0.5
   priority: 1
 
+- name    : spot
+  topic   : /spot/collab/cmd_vel
+  timeout : 0.5
+  priority: 150
+
 locks:
 - name    : e_stop
   topic   : robotnik_base_hw/emergency_stop
